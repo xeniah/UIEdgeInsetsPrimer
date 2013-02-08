@@ -66,7 +66,7 @@
                                                 </connections>
                                             </slider>
                                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000015" contentMode="center" image="Callout_clip_art_small.png" id="Dsy-gM-ecs">
-                                                <rect key="frame" x="20" y="193" width="280" height="252"/>
+                                                <rect key="frame" x="10" y="238" width="298" height="206"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>
@@ -105,6 +105,31 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.44688760080000001" blue="0.092332409269999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="iE1-HK-Jmf">
+                                                <rect key="frame" x="86" y="196" width="161" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <segments>
+                                                    <segment title="Tile"/>
+                                                    <segment title="Stretch"/>
+                                                </segments>
+                                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="a30-2w-wR0">
+                                                <rect key="frame" x="290" y="7" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="QFH-8s-ey9" kind="modal" id="UqV-bD-eQN"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
@@ -112,6 +137,7 @@
                             </scrollView>
                         </subviews>
                     </view>
+                    <navigationItem key="navigationItem" id="Hov-ke-ROf"/>
                     <connections>
                         <outlet property="bottomCapView" destination="KhA-Sk-OrM" id="wGJ-Kb-hPg"/>
                         <outlet property="bottomSlider" destination="yow-yX-TqK" id="NcI-5B-cK0"/>
@@ -121,6 +147,7 @@
                         <outlet property="rightCapView" destination="ffi-lE-CBO" id="m4h-fp-PmI"/>
                         <outlet property="rightSlider" destination="cRi-nW-6nv" id="mCa-O4-9wR"/>
                         <outlet property="scrollView" destination="KiH-ap-bq9" id="mDN-Td-EDF"/>
+                        <outlet property="segmentedControl" destination="iE1-HK-Jmf" id="IU2-vW-krQ"/>
                         <outlet property="smallImageView" destination="X5L-Hq-OEw" id="zow-qu-tJX"/>
                         <outlet property="topCapView" destination="1zk-zL-dJn" id="bcx-fb-wGG"/>
                         <outlet property="topSlider" destination="Bqx-wN-b1b" id="NJP-oi-Ygw"/>
@@ -128,6 +155,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="320" y="-43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Laj-Qn-T0l">
+            <objects>
+                <viewController id="QFH-8s-ey9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yB5-F8-rEa">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="Sp3-nA-Iym">
+                                <rect key="frame" x="-3" y="299" width="320" height="131"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Edge inset values are applied to a rectangle to shrink or expand the area represented by that rectangle. Typically, edge insets are used during view layout to modify the view’s frame. Positive values cause the frame to be inset (or shrunk) by the specified amount. Negative values cause the frame to be outset (or expanded) by the specified amount.</string>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="uyy-Ah-b8L">
+                                <rect key="frame" x="-2" y="22" width="320" height="282"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">You use this method to add cap insets to an image or to change the existing cap insets of an image. In both cases, you get back a new image and the original image remains untouched.
+
+During scaling or resizing of the image, areas covered by a cap are not scaled or resized. Instead, the pixel area not covered by the cap in each direction is tiled, left-to-right and top-to-bottom, to resize the image. This technique is often used to create variable-width buttons, which retain the same rounded corners but whose center region grows or shrinks as needed. For best performance, use a tiled area that is a 1x1 pixel area in size.</mutableString>
+                                <color key="textColor" red="0.2588235438" green="0.39607846740000002" blue="0.58431375029999999" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="resizableImageWithCapInsets:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gmU-JR-g2y">
+                                <rect key="frame" x="7" y="5" width="514" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FCn-iA-lHs">
+                                <rect key="frame" x="240" y="424" width="60" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="done">
+                                    <color key="titleColor" red="0.25882354378700256" green="0.39607846736907959" blue="0.58431375026702881" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" id="Jk9-ts-c6I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPX-z8-Tg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="-37"/>
         </scene>
     </scenes>
     <resources>
@@ -150,6 +237,7 @@
                 <relationship kind="outlet" name="rightCapView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="rightSlider" candidateClass="UISlider"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="segmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="smallImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="topCapView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="topSlider" candidateClass="UISlider"/>

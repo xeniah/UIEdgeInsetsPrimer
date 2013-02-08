@@ -17,13 +17,14 @@
 		A99636B216BA2AFB00A49789 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99636B116BA2AFB00A49789 /* Default@2x.png */; };
 		A99636B416BA2AFB00A49789 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A99636B316BA2AFB00A49789 /* Default-568h@2x.png */; };
 		A99636B716BA2AFB00A49789 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99636B516BA2AFB00A49789 /* MainStoryboard_iPhone.storyboard */; };
-		A99636BD16BA2AFB00A49789 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A99636BC16BA2AFB00A49789 /* ViewController.m */; };
 		A99636C516BA2AFB00A49789 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99636C416BA2AFB00A49789 /* SenTestingKit.framework */; };
 		A99636C616BA2AFB00A49789 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A996369D16BA2AFB00A49789 /* UIKit.framework */; };
 		A99636C716BA2AFB00A49789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A996369F16BA2AFB00A49789 /* Foundation.framework */; };
 		A99636CF16BA2AFB00A49789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A99636CD16BA2AFB00A49789 /* InfoPlist.strings */; };
 		A99636D216BA2AFB00A49789 /* UIEdgeInsetDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A99636D116BA2AFB00A49789 /* UIEdgeInsetDemoTests.m */; };
 		A99636DC16BA2B9100A49789 /* Callout_clip_art_small.png in Resources */ = {isa = PBXBuildFile; fileRef = A99636DB16BA2B9100A49789 /* Callout_clip_art_small.png */; };
+		A9ACD81816C56E5100A11BB3 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACD81716C56E5100A11BB3 /* InfoViewController.m */; };
+		A9ACD81B16C56EDF00A11BB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACD81A16C56EDF00A11BB3 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +52,6 @@
 		A99636B116BA2AFB00A49789 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A99636B316BA2AFB00A49789 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A99636B616BA2AFB00A49789 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		A99636BB16BA2AFB00A49789 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A99636BC16BA2AFB00A49789 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A99636C316BA2AFB00A49789 /* UIEdgeInsetDemoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIEdgeInsetDemoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99636C416BA2AFB00A49789 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A99636CC16BA2AFB00A49789 /* UIEdgeInsetDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIEdgeInsetDemoTests-Info.plist"; sourceTree = "<group>"; };
@@ -60,6 +59,10 @@
 		A99636D016BA2AFB00A49789 /* UIEdgeInsetDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIEdgeInsetDemoTests.h; sourceTree = "<group>"; };
 		A99636D116BA2AFB00A49789 /* UIEdgeInsetDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIEdgeInsetDemoTests.m; sourceTree = "<group>"; };
 		A99636DB16BA2B9100A49789 /* Callout_clip_art_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Callout_clip_art_small.png; sourceTree = "<group>"; };
+		A9ACD81616C56E5100A11BB3 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoViewController.h; path = ../InfoViewController.h; sourceTree = "<group>"; };
+		A9ACD81716C56E5100A11BB3 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoViewController.m; path = ../InfoViewController.m; sourceTree = "<group>"; };
+		A9ACD81916C56EDF00A11BB3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A9ACD81A16C56EDF00A11BB3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +122,13 @@
 		A99636A316BA2AFB00A49789 /* UIEdgeInsetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A9ACD81916C56EDF00A11BB3 /* ViewController.h */,
+				A9ACD81A16C56EDF00A11BB3 /* ViewController.m */,
+				A9ACD81616C56E5100A11BB3 /* InfoViewController.h */,
+				A9ACD81716C56E5100A11BB3 /* InfoViewController.m */,
 				A99636AC16BA2AFB00A49789 /* AppDelegate.h */,
 				A99636AD16BA2AFB00A49789 /* AppDelegate.m */,
 				A99636B516BA2AFB00A49789 /* MainStoryboard_iPhone.storyboard */,
-				A99636BB16BA2AFB00A49789 /* ViewController.h */,
-				A99636BC16BA2AFB00A49789 /* ViewController.m */,
 				A99636A416BA2AFB00A49789 /* Supporting Files */,
 			);
 			path = UIEdgeInsetDemo;
@@ -276,7 +281,8 @@
 			files = (
 				A99636AA16BA2AFB00A49789 /* main.m in Sources */,
 				A99636AE16BA2AFB00A49789 /* AppDelegate.m in Sources */,
-				A99636BD16BA2AFB00A49789 /* ViewController.m in Sources */,
+				A9ACD81816C56E5100A11BB3 /* InfoViewController.m in Sources */,
+				A9ACD81B16C56EDF00A11BB3 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

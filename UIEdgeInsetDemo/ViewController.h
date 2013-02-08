@@ -8,42 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface InsetsRepresentation : NSObject
-{
-    int top;
-    int left;
-    int bottom;
-    int right;
-}
-
-@property (nonatomic, assign) int top;
-@property (nonatomic, assign) int left;
-@property (nonatomic, assign) int bottom;
-@property (nonatomic, assign) int right;
-
-- (id)initWithTop:(int)aTop left:(int)aLeft bottom:(int)aBottom right:(int)aRight;
-@end
-
-@implementation InsetsRepresentation
-@synthesize top, bottom, left, right;
-- (id) initWithTop:(int)aTop left:(int)aLeft bottom:(int)aBottom right:(int)aRight
-{
-    if (self = [super init]) {
-        top = aTop;
-        left = aLeft;
-        bottom = aBottom;
-        right = aRight;
-    }
-    return self;
-}
+#define TOP_VALUE_KEY           @"topValue"
+#define LEFT_VALUE_KEY          @"leftValueKey"
+#define RIGHT_VALUE_KEY         @"rightValueKey"
+#define BOTTOM_VALUE_KEY        @"bottomValueKey"
 
 
-@end
 
 @interface ViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 
 @property (strong, nonatomic) IBOutlet UISlider *topSlider;

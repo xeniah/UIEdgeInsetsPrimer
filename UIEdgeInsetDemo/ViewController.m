@@ -17,7 +17,7 @@
 
 @implementation ViewController
 @synthesize scrollView, topSlider, leftSlider, bottomSlider, rightSlider, imageView, smallImageView;
-@synthesize topCapView, leftCapView, bottomCapView, rightCapView;
+@synthesize topCapView, leftCapView, bottomCapView, rightCapView, segmentedControl;
 
 - (void)viewDidLoad
 {
@@ -93,14 +93,35 @@
     
 }
 
+- (void)saveSliderValues
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithFloat:topSlider.value] forKey:TOP_VALUE_KEY];
+    [defaults setObject:[NSNumber numberWithFloat:leftSlider.value] forKey:LEFT_VALUE_KEY];
+    [defaults setObject:[NSNumber numberWithFloat:bottomSlider.value] forKey:BOTTOM_VALUE_KEY];
+    [defaults setObject:[NSNumber numberWithFloat:rightSlider.value] forKey:RIGHT_VALUE_KEY];
+}
+
 -(IBAction)resizeImage:(id)sender
 {
+    /*
+    You use this method to add cap insets to an image or to change the existing cap insets of an image. In both cases, you get back a new image and the original image remains untouched.
+    
+    During scaling or resizing of the image, areas covered by a cap are not scaled or resized. Instead, the pixel area not covered by the cap in each direction is tiled, left-to-right and top-to-bottom, to resize the image. This technique is often used to create variable-width buttons, which retain the same rounded corners but whose center region grows or shrinks as needed. For best performance, use a tiled area that is a 1x1 pixel area in size.
+    */
+    
+    [self saveSliderValues];
+
     self.imageView.contentMode = UIViewContentModeScaleToFill;
     UIImage *image = [UIImage imageNamed:@"Callout_clip_art_small.png"];
-    self.imageView.image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(topSlider.value, leftSlider.value, bottomSlider.maximumValue-bottomSlider.value, rightSlider.maximumValue-rightSlider.value)];
- 
- //   self.imageView.image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(topSlider.value, leftSlider.value, bottomSlider.value, rightSlider.value) resizingMode:UIImageResizingModeStretch];
-    NSLog(@"Cap insets: top: %f, left: %f, bottom: %f, right: %f",topSlider.value, leftSlider.value, bottomSlider.maximumValue-bottomSlider.value, rightSlider.maximumValue-rightSlider.value);
+ //   self.imageView.image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(topSlider.value, leftSlider.value, bottomSlider.maximumValue-bottomSlider.value, rightSlider.maximumValue-rightSlider.value)];
+    UIImageResizingMode resizingMode = UIImageResizingModeTile;
+    if (self.segmentedControl.selectedSegmentIndex == 1) {
+        resizingMode = UIImageResizingModeStretch;
+    }
+    UIEdgeInsets myInsets = UIEdgeInsetsMake(-topSlider.value, -leftSlider.value, -(bottomSlider.maximumValue-bottomSlider.value), -(rightSlider.maximumValue-rightSlider.value));
+    self.imageView.image = [image resizableImageWithCapInsets:myInsets resizingMode:resizingMode];
+    NSLog(@"Cap insets: top: %f, left: %f, bottom: %f, right: %f", myInsets.top, myInsets.left, myInsets.bottom, myInsets.right);
     
 }
 
@@ -114,7 +135,6 @@
     self.topCapView.frame = tcFrame;
     NSLog(@"Top value: %f", self.topSlider.value);
     
-
 }
 
 -(IBAction) changeLeftView:(id)sender
